@@ -7,7 +7,7 @@ pipeline {
         stage('checkout') {
             steps{
                 echo 'checking out code from gitrepo'
-                git branch: 'main', url: 'https://github.com/raja9542/insure1.git'
+                git 'https://github.com/raja9542/insure2.git'
             }
             
         }
