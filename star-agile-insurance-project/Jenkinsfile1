@@ -1,0 +1,15 @@
+pipeline {
+    agent any 
+    tools {
+        maven 'M2_HOME'
+    }
+    stages{
+        stage('checkout') {
+            steps{
+                echo 'checking out code from gitrepo'
+                git branch: 'main', url: 'https://github.com/raja9542/insure1.git'
+            }
+            
+        }
+    }
+}
