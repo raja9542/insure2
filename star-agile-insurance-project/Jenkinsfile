@@ -8,8 +8,13 @@ pipeline {
             steps{
                 echo 'checking out code from gitrepo'
                 git 'https://github.com/raja9542/insure2.git'
-            }
-            
+            }  
+        }
+        stage('build') {
+            steps{
+                echo 'building the maven package'
+                sh 'mvn clean package'
+            }  
         }
     }
 }
